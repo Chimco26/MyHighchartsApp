@@ -30,32 +30,16 @@ public class MainActivity extends AppCompatActivity {
         private Gson mGson = new Gson();
 
 
-    public ArrayList<String> getmYLabels() {
-        return YLabels;
-    }
-
     public void setYLabels(ArrayList<String> YLabels) {
         this.YLabels = YLabels;
-    }
-
-    public ArrayList<String> getmXLabels() {
-        return XLabels;
     }
 
     public void setXLabels(ArrayList<String> XLabels) {
         this.XLabels = XLabels;
     }
 
-    public ArrayList<Object[]> getmHeatMapData() {
-        return heatmapData;
-    }
-
     public void setHeatmapData(ArrayList<Object[]> heatmapData) {
         this.heatmapData = heatmapData;
-    }
-
-    public ArrayList<String> getmKeys() {
-        return mKeys;
     }
 
     public void setKeys(ArrayList<String> mKeys) {
