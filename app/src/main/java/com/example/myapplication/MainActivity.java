@@ -29,23 +29,6 @@ public class MainActivity extends AppCompatActivity {
         private ArrayList<String> mKeys;
         private Gson mGson = new Gson();
 
-
-    public void setYLabels(ArrayList<String> YLabels) {
-        this.YLabels = YLabels;
-    }
-
-    public void setXLabels(ArrayList<String> XLabels) {
-        this.XLabels = XLabels;
-    }
-
-    public void setHeatmapData(ArrayList<Object[]> heatmapData) {
-        this.heatmapData = heatmapData;
-    }
-
-    public void setKeys(ArrayList<String> mKeys) {
-        this.mKeys = mKeys;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
         mXlabels.add("M-6");
         mXlabels.add("M-7");
         mXlabels.add("M-10");
-        setXLabels(mXlabels);
+        XLabels = mXlabels;
 
         ArrayList<String> mYlabels = new ArrayList<>();
         mYlabels.add("03-01");
-        setYLabels(mYlabels);
-        setHeatmapData(mGson.fromJson("[[0,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-1\",\"100%\",\"100%\",\"100%\"],[1,0,\"22.24%\",\"rgba(208,210,45,0.9\",\"03-01\",\"M-2\",\"22.24%\",\"100%\",\"22%\"],[2,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-8\",\"100%\",\"100%\",\"100%\"],[3,0,\"1.42%\",\"rgba(230,29,15,0.9\",\"03-01\",\"M-3\",\"1.42%\",\"100%\",\"1%\"],[4,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-4\",\"100%\",\"100%\",\"100%\"],[5,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-5\",\"100%\",\"100%\",\"100%\"],[6,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-6\",\"100%\",\"100%\",\"100%\"],[7,0,\"98.27%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-7\",\"98.27%\",\"100%\",\"98%\"],[8,0,\"0.00%\",\"rgba(230,29,15,0.9\",\"03-01\",\"M-10\",\"0.00%\",\"100%\",\"0%\"]]\n" + " ",
-                new TypeToken<ArrayList<Object[]>>() {}.getType()));
+        YLabels = mYlabels;
+        heatmapData = mGson.fromJson("[[0,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-1\",\"100%\",\"100%\",\"100%\"],[1,0,\"22.24%\",\"rgba(208,210,45,0.9\",\"03-01\",\"M-2\",\"22.24%\",\"100%\",\"22%\"],[2,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-8\",\"100%\",\"100%\",\"100%\"],[3,0,\"1.42%\",\"rgba(230,29,15,0.9\",\"03-01\",\"M-3\",\"1.42%\",\"100%\",\"1%\"],[4,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-4\",\"100%\",\"100%\",\"100%\"],[5,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-5\",\"100%\",\"100%\",\"100%\"],[6,0,\"100%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-6\",\"100%\",\"100%\",\"100%\"],[7,0,\"98.27%\",\"rgba(4,159,30,0.9\",\"03-01\",\"M-7\",\"98.27%\",\"100%\",\"98%\"],[8,0,\"0.00%\",\"rgba(230,29,15,0.9\",\"03-01\",\"M-10\",\"0.00%\",\"100%\",\"0%\"]]\n" + " ",
+                new TypeToken<ArrayList<Object[]>>() {}.getType());
 
         ArrayList<String> mKeys1 = new ArrayList<>();
         mKeys1.add("x");
@@ -90,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         mKeys1.add("valueInPercentage");
         mKeys1.add("target");
         mKeys1.add("Percentage");
-        setKeys(mKeys1);
+        mKeys = mKeys1;
 
         HIChart chart = new HIChart();
         chart.setZoomType("xy");
