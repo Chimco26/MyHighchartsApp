@@ -38,7 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     private ArrayList<String> YLabels;
     private ArrayList<String> XLabels;
-    private  ArrayList<Number[]> heatmapData;
+    private  ArrayList<Object[]> heatmapData;
     private ArrayList<String> mKeys;
 
 
@@ -58,11 +58,11 @@ public class MainActivity2 extends AppCompatActivity {
         this.XLabels = XLabels;
     }
 
-    public ArrayList<Number[]> getmHeatMapData() {
+    public ArrayList<Object[]> getmHeatMapData() {
         return heatmapData;
     }
 
-    public void setHeatmapData(ArrayList<Number[]> heatmapData) {
+    public void setHeatmapData(ArrayList<Object[]> heatmapData) {
         this.heatmapData = heatmapData;
     }
 
@@ -133,25 +133,25 @@ public class MainActivity2 extends AppCompatActivity {
         return mYlabels;
     }
 
-    public ArrayList<Number[]> getNumberArrayList(){
-        Number[][] heatmapData = new Number[][]{
-                {0, 0, 10},
-                {0, 1, 19},
-                {0, 2, 8},
-                {0, 3, 24},
-                {0, 4, 67},
-                {1, 0, 92},
-                {1, 1, 58},
-                {1, 2, 78},
-                {1, 3, 117},
-                {1, 4, 48},
-                {2, 0, 35},
-                {2, 1, 15},
-                {2, 2, 123},
-                {2, 3, 64},
-                {2, 4, 52},
-                {3, 0, 72},
-                {3, 1, 132},
+    public ArrayList<Object[]> getNumberArrayList(){
+        Object[][] heatmapData = new Object[][]{
+                {0, 0, "10"},
+                {0, 1, "19"},
+                {0, 2, "8"},
+                {0, 3, "24"},
+                {0, 4, "67"},
+                {1, 0, "92"},
+                {1, 1, "58"},
+                {1, 2, "78"},
+                {1, 3, "117"},
+                {1, 4, "48"},
+                {2, 0, "35"},
+                {2, 1, "15"},
+                {2, 2, "123"},
+                {2, 3, "64"},
+                {2, 4, "52"},
+                {3, 0, "72"},
+                {3, 1, "132"},
                 {3, 2, 114},
                 {3, 3, 19},
                 {3, 4, 16},
